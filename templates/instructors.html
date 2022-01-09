@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Booking
+{% endblock title %}
+
+{% block body %}
+<div class="container">
+<div class="row ">
+
+{% for instructor in instructor_list %}
+    <div class="col-md-4 my-2">
+      
+      <div class="card" style="width: 18rem;">
+        <img src="static/avatar.png" class="card-img-top rounded-circle" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{instructor.user}}</h5>
+          <p class="card-text">{{instructor.instructor_description}}</p>
+          <a href="/booking" class="btn btn-warning">Book With Me</a>
+        </div>
+      </div>
+    </div>
+
+<!--  
+  <div class="row ">
+  <div class="col">
+
+  
+  </div>
+  </div>
+</div> -->
+{% endfor %}
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="row">
+  <div class="card my-4 mx-5" style="width: 18rem;">
+  <img src="static\madi.jpg
+" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Madi Dahal</h5>
+    <p class="card-text">Sydney ,NSW</p>
+    <a href="/booking" class="btn btn-primary">Book With Me</a>
+  </div>
+</div>
+
+<div class="card my-4 mx-5" style="width: 18rem;">
+  <img src="static\kinar.jpg" class="card-img-scale" alt="...">
+  <div class="card-body ">
+    <h5 class="card-title">Kinar Dahal</h5>
+    <p class="card-text">Sydney ,NSW</p>
+    <a href="/booking" class="btn btn-primary">Book With Me</a>
+  </div>
+</div>
+</div> -->
+
+{% endblock body %}
+
