@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-import django_heroku
+# import django_heroku
 
 from pathlib import Path
 import os
@@ -72,7 +72,6 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ez_road.wsgi.application'
 
 
 # Database
@@ -138,5 +137,3 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
