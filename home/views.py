@@ -3,6 +3,8 @@ from django.shortcuts import render,HttpResponse
 import datetime
 from .forms import ContactUsform
 from django.shortcuts import redirect
+from instructor.models import Instructor
+
 # Create your views here.
 def home(request):
     form=ContactUsform
@@ -18,11 +20,13 @@ def home(request):
 def instructors(request):
     return render(request,'instructors.html')
 
-def booking(request):
+def booking(request,pk):
     
-    time={'6-8':'vacant','8-10':'vacant','10-12':'vacant','12-2':'no','2-4':'no','4-6':'vacant','6-8':'vacant','8-10':'vacant'}
-    context={'data':time}
-    print(context)
+    # time={'6-8':'vacant','8-10':'vacant','10-12':'vacant','12-2':'no','2-4':'no','4-6':'vacant','6-8':'vacant','8-10':'vacant'}
+    ins=Instructor.objects.get(id=pk)
+    context={'ins':ins}
+
+    print(ins)
     return render(request,'booking.html',context
     # # ,context={
     # #     "current_day":current_day

@@ -6,17 +6,17 @@ Booking
 
 {% block body %}
 <div class="container">
-<div class="row ">
+<div class="row">
 
 {% for instructor in instructor_list %}
-    <div class="col-md-4 my-2">
+    <div class="col md-3">
       
       <div class="card" style="width: 18rem;">
         <img src="static/avatar.png" class="card-img-top rounded-circle" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{instructor.user}}</h5>
           <p class="card-text">{{instructor.instructor_description}}</p>
-          <a href="/booking" class="btn btn-warning">Book With Me</a>
+          <a href="booking/{{instructor.id}}" class="btn btn-warning">Book With Me</a>
         </div>
       </div>
     </div>

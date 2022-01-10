@@ -8,7 +8,7 @@ urlpatterns = [
 
     # path('contact',views.contact,name='contact'),
     path('instructors',views.instructors,name='instructors'),
-    path('booking',views.booking,name='booking'),
+    path('booking/<int:pk>',views.booking,name='booking'),
     path('reserve',views.reserve,name='reserve'),
     path('post',views.post,name='post'),
 
